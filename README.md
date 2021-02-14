@@ -1,9 +1,9 @@
 # Youtube-Downloader
 Youtube Downloader 
 
-#####
-Linux
-#####
+//////////////
+Linux:
+/////////////
 Install dependencies:
 
 sudo apt install xclip xsel
