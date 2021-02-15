@@ -27,9 +27,10 @@ iconPath = filePath + "icon.png"
 ##################################
 
 def download_engine():
-    url = Window.url_input.get()
+    url = Window.videoUrl
+    video = Window.video
+    title = video.title
     convert = Window.format_box.get()
-    video = pytube.YouTube(url)
     title = video.title
     title = title.replace(",","")
     title = title.replace("'","")
@@ -138,25 +139,25 @@ class user_interface:
         self.dir_input.insert('0', _text_)
         self.path = path + "/"
 
-
-
-
     def paste(self): #Function for paste button
         self.url_input.delete('0', 'end')
         paste = self.window.clipboard_get()
         self.url_input.insert('0', paste)
 
     def download(self): #function for download button
-
+            self.videoUrl = self.url_input.get()
+            self.video = pytube.YouTube(self.videoUrl)
+            self.videoTitle = self.video.title
             #Execute download_engine function in a new thread
             t = threading.Thread(target=download_engine)
             t.start()
-            self.progressbar.start()
-            self.download_button["state"] = "disabled"
-            self.downloading.configure(background='#f0f0f0', font='{FreeSans} 14 {}', foreground='#00d800', text='Downloading...')
-            self.downloading.place(anchor='nw', width='200', x='150', y='380')
             #check
             schedule_check(t)
+            self.progressbar.start()
+            self.download_button["state"] = "disabled"
+            self.downloading.configure(background='#f0f0f0', font='{FreeSans} 14 {}', foreground='#000000', text='Downloading '+self.videoTitle)
+            self.downloading.place(anchor='nw', width='400', x='40', y='380')
+
 
     def run(self):
         self.mainwindow.mainloop()
