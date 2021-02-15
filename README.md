@@ -11,6 +11,14 @@ pip3 install pytube
 
 pip3 install argparser
 
+In a terminal:
+
+![Terminal](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/help.png)
+
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/terminal.png)
+
+
+
 GUI
 
 ![Graphic interface](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/basic.png)
