@@ -1,42 +1,76 @@
 #!/usr/bin/env python3ve
 
-#import PySimpleGUI as sg
-#
-#
-#class int:
-#    def __init__(self):
-#        sg.theme('LightGrey1')
-#        layout = [
-#
-#                [sg.Text(" ", justification='center')],
-#                [sg.Text("Youtube Downloader", size=(70, 2), justification='center')],
-#                [sg.Text("URL:       "), sg.InputText(key="url", size=(50,10))],
-#                [sg.Text(" ", size=(50, 1), justification='center')],
-#                [sg.Text("Directory: "), sg.InputText(key="dir", size=(50,1)),  sg.FolderBrowse()],
-#                [sg.Text(" ", size=(50, 1), justification='center')],
-#                [sg.Text("Formato:  "), sg.InputCombo(("Video", ".mp3", ".wav"), size=(40, 1)), sg.OK()],
-#                ]
-#
-#        self.window = sg.Window("Youtube Downloader", default_element_size=(40, 1), grab_anywhere=False)
-#        self.window.Layout(layout).Finalize()
-#        event, value = self.window.read()
-#gui = int()
-
-#################################################
+#################################
+#           LIBRARIES           #
+#################################
+import os
+from os import remove
+import sys
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import filedialog
+import asyncio
 import pytube
-import sys
-import os
 import moviepy.editor as mp
-from os import remove
 import argparse
+import threading
 
 
 
+#Path of the program used for the icon
+filePath = __file__[:-12]
+iconPath = filePath + "icon.png"
 
-class GraphApp:
+
+##################################
+#          FUNCTIONS             #
+##################################
+
+def download_engine():
+    url = Window.url_input.get()
+    convert = Window.format_box.get()
+    video = pytube.YouTube(url)
+    title = video.title
+    title = title.replace(",","")
+    title = title.replace("'","")
+    if convert == ".mp3" or convert == ".wav":
+        #Download video in actual directory
+        video.streams.first().download()
+        #Name of the downloaded video
+        dwn_video = title + ".mp4"
+        #get the Video
+        to_convert = mp.VideoFileClip(dwn_video)
+        if convert == ".mp3":
+            to_convert.audio.write_audiofile(Window.path + title + ".mp3")
+            remove(dwn_video)
+        else:
+            to_convert.audio.write_audiofile(Window.path + title + ".wav")
+            remove(dwn_video)
+    else: #.mp4
+        video.streams.first().download(Window.path)
+
+#check periodically
+def schedule_check(t):
+    Window.window.after(1000, check_if_done, t)
+
+def check_if_done(t):
+    # if the new thread has finished...
+    if not t.is_alive():
+        #Restart button
+        Window.downloading.configure(background='#f0f0f0', font='{FreeSans} 14 {}', foreground='#00d800', text='Downloaded!!')
+        Window.downloading.place(anchor='nw', width='200', x='150', y='380')
+        Window.download_button["state"] = "normal"
+        Window.progressbar.stop()
+    else:
+        #check again
+        schedule_check(t)
+
+
+###################################
+#       INTERFACE CLASS           #
+###################################
+
+class user_interface:
     def __init__(self, master=None):
         # build ui
         self.window = tk.Tk() if master is None else tk.Toplevel(master)
@@ -53,11 +87,12 @@ class GraphApp:
         self.dir_input = tk.Entry(self.frame_1)
         self.dir_input.place(anchor='nw', height='35', width='300', x='15', y='220')
         self.format_label = ttk.Label(self.frame_1)
-        self.format_label.configure(background='#f0f0f0', font='{Liberation Serif} 14 {}', text='Format:')
-        self.format_label.place(anchor='nw', x='25', y='280')
+        self.format_label.configure(background='#f0f0f0', font='{C059} 14 {}', text='Format:')
+        self.format_label.place(anchor='nw', x='70', y='280')
+        self.format_box = ttk.Combobox(self.frame_1)
         self.format_box = ttk.Combobox(self.frame_1)
         self.format_box.configure(values='"Video" ".mp3" ".wav"')
-        self.format_box.place(anchor='nw', height='35', x='15', y='320')
+        self.format_box.place(anchor='nw', height='35', width='120', x='60', y='320')
         self.progressbar = ttk.Progressbar(self.frame_1)
         self.progressbar.configure(length='100', mode='indeterminate', orient='horizontal')
         self.progressbar.place(anchor='nw', height='35', width='400', x='40', y='420')
@@ -87,34 +122,49 @@ class GraphApp:
         self.title = tk.Label(self.window)
         self.title.configure(background='#f0f0f0', font='{Ubuntu Condensed} 14 {}', foreground='#000000', text='YOU')
         self.title.place(anchor='nw', x='190', y='20')
+        self.downloading = tk.Label(self.window)
         self.window.configure(background='#f0f0f0', height='500', width='500')
         self.window.resizable(False, False)
+        self.icon_png = tk.PhotoImage(file=iconPath)
+        self.window.iconphoto(True, self.icon_png)
+        self.window.title('Youtube-Downloader')
 
         # Main widget
         self.mainwindow = self.window
 
-    def browse_files(self):
-        self.path = filedialog.askdirectory()
-        _text_ = self.path
+    def browse_files(self): #Browse button
+        path = filedialog.askdirectory() #ask dir
+        _text_ = path
         self.dir_input.insert('0', _text_)
+        self.path = path + "/"
 
-    def paste(self):
-        pass
 
-    def download(self):
-        try:
-            url = self.url_input.get()
-            print(url)
-            video = pytube.YouTube(url)
-            title=video.title
-            video.streams.first().download(self.path)
-        except:
-            self.url_error.configure(background='#f0f0f0', foreground='#e60031', text='You need to to enter a valid URL. Like https//youtube.com/a2dr3')
-            self.url_error.place(anchor='nw', x='25', y='160')
+
+
+    def paste(self): #Function for paste button
+        self.url_input.delete('0', 'end')
+        paste = self.window.clipboard_get()
+        self.url_input.insert('0', paste)
+
+    def download(self): #function for download button
+
+            #Execute download_engine function in a new thread
+            t = threading.Thread(target=download_engine)
+            t.start()
+            self.progressbar.start()
+            self.download_button["state"] = "disabled"
+            self.downloading.configure(background='#f0f0f0', font='{FreeSans} 14 {}', foreground='#00d800', text='Downloading...')
+            self.downloading.place(anchor='nw', width='200', x='150', y='380')
+            #check
+            schedule_check(t)
 
     def run(self):
         self.mainwindow.mainloop()
 
+
+#################################
+#           MAIN                #
+#################################
 if __name__ == '__main__':
-    app = GraphApp()
-    app.run()
+    Window = user_interface()
+    Window.run()
