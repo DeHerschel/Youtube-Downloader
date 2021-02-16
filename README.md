@@ -4,10 +4,9 @@ Youtube Downloader
 # Linux
 Install dependencies:
 
-pip3 install pytube
-
-pip3 install argparser
-
+cd Linux
+chmod +x install.sh
+sudo ./install.sh
 ______________________________________________________________________________________________________
 
 In a terminal:
