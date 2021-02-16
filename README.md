@@ -4,8 +4,11 @@ Youtube Downloader
 # Linux
 Install dependencies:
 
+
 cd Linux
+
 chmod +x install.sh
+
 sudo ./install.sh
 ______________________________________________________________________________________________________
 
