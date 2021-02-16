@@ -27,3 +27,10 @@ GUI:
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/downloading.png)
 
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/downloaded.png)
+
+
+_________________________________________________________________________________________________________
+
+# Windows
+
+No tested yet
