@@ -1,4 +1,4 @@
-# Youtube-Downloader
+# YOUTUBE DOWNLOADER
 Super bascic youtube downloader. Downloads and convert in mp3 or wav. 
 ________________________________________________________________________________________________________
 
