@@ -21,6 +21,7 @@ Double click in yt-downloader.py.
 #
 
 You can create a shortcut in your Desktop:
+
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/shortcut.png)
 
 In properties you can change the icon:
