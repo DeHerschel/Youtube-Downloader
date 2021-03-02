@@ -8,7 +8,6 @@ ________________________________________________________________________________
 You need python3. 
 
 Install dependencies:
-#
 
 pip3 install moviepy
 
@@ -43,7 +42,7 @@ ________________________________________________________________________________
 You need python3. 
 
 Install dependencies:
-#
+
 
 cd Linux
 
