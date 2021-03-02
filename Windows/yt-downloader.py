@@ -114,7 +114,7 @@ class user_interface:
         self.label_5.place(anchor='nw', x='223', y='20')
         self.tittle_down = tk.Label(self.frame_1)
         self.tittle_down.configure(background='#f0f0f0', font='{Noto Sans Mono CJK TC} 14 {}', text='DOWNLOADER')
-        self.tittle_down.place(anchor='nw', x='184', y='46')
+        self.tittle_down.place(anchor='nw', x='165', y='46')
         self.frame_1.configure(background='#f0f0f0', height='500', width='500')
         self.frame_1.place(anchor='nw', x='0', y='0')
         self.title = tk.Label(self.window)
