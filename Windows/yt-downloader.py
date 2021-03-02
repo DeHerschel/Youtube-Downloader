@@ -111,7 +111,7 @@ class user_interface:
         self.paste_button.configure(command=self.paste)
         self.label_5 = tk.Label(self.frame_1)
         self.label_5.configure(background='#ff0000', font='{Ubuntu Condensed} 14 {bold}', foreground='#ffffff', text='TUBE')
-        self.label_5.place(anchor='nw', x='223', y='20')
+        self.label_5.place(anchor='nw', x='233', y='20')
         self.tittle_down = tk.Label(self.frame_1)
         self.tittle_down.configure(background='#f0f0f0', font='{Noto Sans Mono CJK TC} 14 {}', text='DOWNLOADER')
         self.tittle_down.place(anchor='nw', x='165', y='46')
