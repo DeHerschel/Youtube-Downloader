@@ -5,15 +5,36 @@ ________________________________________________________________________________
 
 # Windows
 
-yt-downloader.py
+You need python3. 
+Install dependencies: 
+
+pip3 install moviepy
+pip3 install pytube
+
+#
+
+Double click in yt-downloader.py.
 
 
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windowsgui.png)
+
+#
+
+You can create a shortcut in your Desktop:
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/shortcut.png)
+
+In properties you can change the icon:
+
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/properties.png)
+
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/fullyt.png)
+
 
 
 ________________________________________________________________________________________________________
 
 # Linux
+You need python3. 
 Install dependencies:
 
 
