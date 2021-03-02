@@ -13,13 +13,12 @@ import moviepy.editor as mp
 import argparse
 import threading
 import time
+import win32gui, win32con
 #Path of the program used for the icon
 filePath = __file__[:-17]
 iconPath = filePath + "\icon.png"
 temp = "C:\Windows\Temp"
-import win32gui, win32con
-hide = win32gui.GetForegroundWindow()
-win32gui.ShowWindow(hide, win32con.SW_HIDE)
+
 ##################################
 #          FUNCTIONS             #
 ##################################
@@ -166,6 +165,8 @@ class user_interface:
 #           MAIN                #
 #################################
 if __name__ == '__main__':
+    hide = win32gui.GetForegroundWindow()
+    win32gui.ShowWindow(hide, win32con.SW_HIDE)
     Window = user_interface()
     Window.run()
 
