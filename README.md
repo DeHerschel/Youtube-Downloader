@@ -7,9 +7,10 @@ ________________________________________________________________________________
 
 You need python3. 
 
-Install dependencies: 
+Install dependencies:
+#
 
-*pip3 install moviepy
+pip3 install moviepy
 
 pip3 install pytube
 
@@ -42,13 +43,13 @@ ________________________________________________________________________________
 You need python3. 
 
 Install dependencies:
+#
 
+cd Linux
 
--cd Linux-
+chmod +x install.sh
 
--chmod +x install.sh-
-
--sudo ./install.sh-
+sudo ./install.sh
 
 # 
 
