@@ -15,8 +15,8 @@ import threading
 import time
 import win32gui, win32con
 #Path of the program used for the icon
-filePath = __file__[:-17]
-iconPath = filePath + "\icon.png"
+filePath = __file__[:-16]
+iconPath = filePath + "icon.png"
 temp = "C:\Windows\Temp"
 
 ##################################
