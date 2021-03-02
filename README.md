@@ -1,6 +1,15 @@
 # Youtube-Downloader
 Super bascic youtube downloader. Downloads and convert in mp3 or wav. 
 
+_________________________________________________________________________________________________________
+
+# Windows
+
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windowsgui.png)
+
+
+________________________________________________________________________________________________________
+
 # Linux
 Install dependencies:
 
@@ -30,8 +39,4 @@ GUI:
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/downloaded.png)
 
 
-_________________________________________________________________________________________________________
 
-# Windows
-
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windowsgui.png)
