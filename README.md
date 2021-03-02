@@ -24,7 +24,7 @@ You can create a shortcut in your Desktop:
 
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/shortcut.png)
 
-In properties you can change the icon:
+In properties you can also change the icon:
 
 ![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/properties.png)
 
