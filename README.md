@@ -5,7 +5,9 @@ ________________________________________________________________________________
 
 ## Windows
 
-You need python3. In Winodows10 you can run:
+You need python3.
+
+In Winodows10 you can run:
 
 ```batch
 python3
