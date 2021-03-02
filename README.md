@@ -9,10 +9,9 @@ You need python3.
 
 Install dependencies: 
 
--pip3 install moviepy-
+*pip3 install moviepy
 
-
--pip3 install pytube-
+pip3 install pytube
 
 
 
