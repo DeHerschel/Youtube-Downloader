@@ -16,7 +16,7 @@ pip3 install pytube
 Double click in yt-downloader.py.
 
 
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windowsgui.png)
+![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windows.png)
 
 #
 
