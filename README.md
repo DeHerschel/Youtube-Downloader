@@ -9,11 +9,12 @@ You need python3.
 
 Install dependencies:
 
+
+
+```batch
 pip3 install moviepy
-
 pip3 install pytube
-
-
+```
 
 #
 
@@ -44,12 +45,12 @@ You need python3.
 Install dependencies:
 
 
+
+```bash
 cd Linux
-
 chmod +x install.sh
-
 sudo ./install.sh
-
+```
 # 
 
 In a terminal:
