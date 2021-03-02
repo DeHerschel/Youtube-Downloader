@@ -3,13 +3,18 @@ Super bascic youtube downloader. Downloads and converts in mp3 or wav.
 ________________________________________________________________________________________________________
 
 
-# Windows
+## Windows
 
-You need python3. 
+You need python3. In Winodows10 you can run:
+
+```batch
+python3
+```
+and the Microsoft Store should open, where you can download it. 
+Better if you download it from https://www.python.org
+
 
 Install dependencies:
-
-
 
 ```batch
 pip3 install moviepy
