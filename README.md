@@ -1,5 +1,5 @@
 # YOUTUBE DOWNLOADER
-Super bascic youtube downloader. Downloads and convert in mp3 or wav. 
+Super bascic youtube downloader. Downloads and converts in mp3 or wav. 
 ________________________________________________________________________________________________________
 
 
