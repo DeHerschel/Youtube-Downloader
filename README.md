@@ -44,7 +44,7 @@ Install dependencies:
 
 
 ```bash
-cd Linux
+cd Youtube-Dowloader
 chmod +x install.sh
 sudo ./install.sh
 ```
