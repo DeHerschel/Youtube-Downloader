@@ -10,6 +10,7 @@ You need python3.
 Install dependencies:
 
 ```batch
+pip3 install pywin32
 pip3 install moviepy
 pip3 install pytube
 ```
