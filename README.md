@@ -50,13 +50,16 @@ sudo ./install.sh
 ```
 # 
 
-In a terminal:
+After run the install script you can type yt-downloader in a terminal:
+
+![terminal help](https://user-images.githubusercontent.com/34777795/109878926-3957b800-7c75-11eb-85af-12948c57ef37.png)
+
+![terminal run](https://user-images.githubusercontent.com/34777795/109878976-483e6a80-7c75-11eb-87a2-e3d4e8f8ded7.png)
 
 
-![help](https://user-images.githubusercontent.com/34777795/109872053-2ee4f080-7c6c-11eb-8750-3912288a5658.png)
+Also you can find the GUI in the apps space: 
 
-![terminal](https://user-images.githubusercontent.com/34777795/109872055-2ee4f080-7c6c-11eb-9f81-3af765974a9f.png)
-
+![Ubuntu Apps with yt-downloader](https://user-images.githubusercontent.com/34777795/109878672-e0881f80-7c74-11eb-9acf-3948af453f3b.png)
 
 
 GUI:
