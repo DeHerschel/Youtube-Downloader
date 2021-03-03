@@ -1,3 +1,4 @@
+
 # YOUTUBE DOWNLOADER
 Super bascic youtube downloader. Downloads and converts in mp3 or wav. 
 ________________________________________________________________________________________________________
@@ -19,21 +20,19 @@ pip3 install pytube
 
 Double click in yt-downloader.py.
 
+![windows](https://user-images.githubusercontent.com/34777795/109870715-be899f80-7c6a-11eb-811c-da269cb65917.png)
 
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/windows.png)
 
-#
+Maybe you want to change the program path to C:\%HOMEDIR%\Appdata\Local\Programs
 
 You can create a shortcut in your Desktop:
 
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/shortcut.png)
+![shortcut](https://user-images.githubusercontent.com/34777795/109870841-de20c800-7c6a-11eb-849b-92cfdb1775bf.png)
 
 In properties you can also change the icon:
 
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/properties.png)
-
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/fullyt.png)
-
+![properties](https://user-images.githubusercontent.com/34777795/109870837-dd883180-7c6a-11eb-9c83-5c7dcea56755.png)
+![fullyt](https://user-images.githubusercontent.com/34777795/109870834-dcef9b00-7c6a-11eb-906e-dd77441480b6.png)
 
 
 ________________________________________________________________________________________________________
