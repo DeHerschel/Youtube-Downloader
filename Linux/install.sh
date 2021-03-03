@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-
+USER_HOME=$(eval echo ~${SUDO_USER})
 if [ "$EUID" -ne 0 ]; then
         echo "Error. Execute as root"
         exit 1
@@ -24,8 +24,8 @@ else
 fi
 path=$(readlink -f $0);
 path=$(dirname $path);
-desk="~/.local/share/applications/yt-downloader.desktop"
-
+desk="$USER_HOME/.local/share/applications/yt-downloader.desktop"
+ln -s $path/Console/yt-downloader /usr/local/bin/yt-downloader
 
 echo "[Desktop Entry]" >> "$desk"
 echo "Version=1.0" >> "$desk"
