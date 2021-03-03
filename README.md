@@ -1,4 +1,3 @@
-
 # YOUTUBE DOWNLOADER
 Super bascic youtube downloader. Downloads and converts in mp3 or wav. 
 ________________________________________________________________________________________________________
@@ -53,19 +52,18 @@ sudo ./install.sh
 
 In a terminal:
 
-![Terminal](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/help.png)
 
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/terminal.png)
+![help](https://user-images.githubusercontent.com/34777795/109872053-2ee4f080-7c6c-11eb-8750-3912288a5658.png)
+
+![terminal](https://user-images.githubusercontent.com/34777795/109872055-2ee4f080-7c6c-11eb-9f81-3af765974a9f.png)
 
 
 
 GUI:
 
-![Graphic interface](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/basic.png)
-
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/downloading.png)
-
-![](https://raw.githubusercontent.com/DeHerschel/Youtube-Downloader/main/assets/downloaded.png)
+![Graphic interface](https://user-images.githubusercontent.com/34777795/109872045-2db3c380-7c6c-11eb-82aa-00c467d36db7.png)
+![downloading](https://user-images.githubusercontent.com/34777795/109872051-2e4c5a00-7c6c-11eb-9d49-e3880f6de036.png)
+![downloaded](https://user-images.githubusercontent.com/34777795/109872050-2e4c5a00-7c6c-11eb-9b0e-5560dee87387.png)
 
 
 
