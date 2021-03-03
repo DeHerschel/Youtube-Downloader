@@ -26,6 +26,7 @@ path=$(readlink -f $0);
 path=$(dirname $path);
 desk="~/.local/share/applications/yt-downloader.desktop"
 
+
 echo "[Desktop Entry]" >> "$desk"
 echo "Version=1.0" >> "$desk"
 echo "Name=Youtube Downloader" >> "$desk"
