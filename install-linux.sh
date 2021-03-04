@@ -26,7 +26,7 @@ path=$(readlink -f $0);
 path=$(dirname $path);
 desk="$USER_HOME/.local/share/applications/yt-downloader.desktop"
 cp -r $path/Linux $USER_HOME/.local/yt-downloader
-mv $USER_HOME/.local/yt-downloader/Linux/Console/yt-downloader.py $USER_HOME/.local/yt-downloader/Console/yt-downloader
+mv $USER_HOME/.local/yt-downloader/Console/yt-downloader.py $USER_HOME/.local/yt-downloader/Console/yt-downloader
 ln -s $USER_HOME/.local/yt-downloader/Console/yt-downloader /usr/local/bin/yt-downloader
 
 echo "[Desktop Entry]" >> "$desk"
