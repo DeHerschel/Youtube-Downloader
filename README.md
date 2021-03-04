@@ -64,10 +64,10 @@ Also you can find the GUI in the apps space:
 
 GUI:
 
-![Graphic interface](https://user-images.githubusercontent.com/34777795/109872045-2db3c380-7c6c-11eb-82aa-00c467d36db7.png)
+![GUI image](https://user-images.githubusercontent.com/34777795/110001330-922a5d80-7d14-11eb-8006-3ff7ec16511c.png)
 
-![downloading](https://user-images.githubusercontent.com/34777795/109872051-2e4c5a00-7c6c-11eb-9d49-e3880f6de036.png)
-![downloaded](https://user-images.githubusercontent.com/34777795/109872050-2e4c5a00-7c6c-11eb-9b0e-5560dee87387.png)
+![Downloading](https://user-images.githubusercontent.com/34777795/110001334-935b8a80-7d14-11eb-9fb2-a4b9ae0b3b9a.png)
+![Downloaded](https://user-images.githubusercontent.com/34777795/110001340-948cb780-7d14-11eb-88da-ae711d129401.png)
 
 
 
