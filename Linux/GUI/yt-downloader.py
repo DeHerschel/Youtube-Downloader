@@ -123,7 +123,7 @@ class user_interface:
         self.icon_png = tk.PhotoImage(file=iconPath)
         self.window.iconphoto(True, self.icon_png)
         self.window.title('Youtube-Downloader')
-        self.img = Image.open("icon.png")
+        self.img = Image.open(iconPath)
         self.img = self.img.resize((60, 60), Image.ANTIALIAS)
         self.photo = ImageTk.PhotoImage(self.img)
         self.lab = tk.Label(self.window, image=self.photo)
