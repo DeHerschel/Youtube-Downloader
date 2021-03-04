@@ -13,6 +13,7 @@ import pytube
 import moviepy.editor as mp
 import argparse
 import threading
+from PIL import ImageTk, Image
 #Path of the program used for the icon
 filePath = __file__[:-16]
 iconPath = filePath + "icon.png"
