@@ -44,6 +44,8 @@ Install dependencies:
 
 
 ```bash
+sudo apt-get install python3-pil python3-pil.imagetk
+git clone https://github.com/DeHerschel/Youtube-Downloader.git
 cd Youtube-Dowloader
 chmod +x install.sh
 sudo ./install.sh
