@@ -2,15 +2,12 @@
 #################################
 #           LIBRARIES           #
 #################################
-import os
 from os import remove
-import sys
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import filedialog
 import pytube
 import moviepy.editor as mp
-import argparse
 import threading
 import time
 import win32gui, win32con
@@ -24,7 +21,6 @@ temp = "C:\Windows\Temp"
 ##################################
 
 def download_engine():
-    url = Window.videoUrl
     video = Window.video
     title = video.title
     convert = Window.format_box.get()
