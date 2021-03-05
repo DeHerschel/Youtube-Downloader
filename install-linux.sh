@@ -36,10 +36,12 @@ fi
 path=$(readlink -f $0);
 path=$(dirname $path);
 desk="$USER_HOME/.local/share/applications/yt-downloader.desktop"
+echo "Copying into .local..."
 cp -r $path/Linux $USER_HOME/.local/yt-downloader
 mv $USER_HOME/.local/yt-downloader/Console/yt-downloader.py $USER_HOME/.local/yt-downloader/Console/yt-downloader
+echo "Creating symlink..."
 ln -s $USER_HOME/.local/yt-downloader/Console/yt-downloader /usr/local/bin/yt-downloader
-
+echo "Creating icon in applications menu..."
 echo "[Desktop Entry]" >> "$desk"
 echo "Version=1.0" >> "$desk"
 echo "Name=Youtube Downloader" >> "$desk"
