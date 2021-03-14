@@ -11,6 +11,7 @@ import moviepy.editor as mp
 import threading
 import time
 import win32gui, win32con
+from PIL import ImageTk, Image
 #Path of the program used for the icon
 filePath = __file__[:-16]
 iconPath = filePath + "icon.png"
